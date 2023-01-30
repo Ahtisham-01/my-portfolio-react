@@ -1,7 +1,7 @@
 import { useThree } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { useSpring } from '@react-spring/three'
-import React from 'react';
+import React from 'react'
 export default function Level() {
   const { nodes } = useGLTF('/level-react-draco.glb')
   const { camera } = useThree()
@@ -10,7 +10,7 @@ export default function Level() {
       from: { y: camera.position.y + 5 },
       to: { y: camera.position.y },
       config: { friction: 100 },
-      onChange: ({ value }) => ((camera.position.y = value.y), camera.lookAt(0, 0, 0)),
+      onChange: ({ value }) => ((camera.position.y = value.y), camera.lookAt(0, 0, 0))
     }),
     [],
   )
