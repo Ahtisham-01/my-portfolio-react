@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body,
+html,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#root {
+  filter: saturate(1.15) hue-rotate(345deg);
+}
+
+/* #root * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+canvas {
+  opacity: 0;
+  touch-action: none;
+  animation: fade-in 1s ease 0.3s forwards;
+  height: 256px;
+  z-index: 0;
+}
+
+canvas:active {
+  cursor: grabbing;
+}
+.text-new-class {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  font-weight: 900;
+  font-size: 40px;
+  margin: 0;
+  color: peru;
+  line-height: 0.6em;
+  letter-spacing: -2px;
+  text-align: left;
+  z-index: 1;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.heading {
+  color: peru;
+  padding: 16px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+header h1 {
+  font-size: 22px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+header {
+  padding: 16px;
+  text-align: center;
+}
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 22px;
+}
+.m {
+  width: 100%;
+  height: 100vh;
+}
+.main-wrap {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
